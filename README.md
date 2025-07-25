@@ -84,9 +84,12 @@ This will create:
 
 #### Step 3: Upload SQL File to Bastion Host 
 ``` bash
-cat data/mysqlsampledatabase.sql | ssh -i ~/.ssh/new-key.pem ec2-user@<BASTION_PUBLIC_IP> 'cat > ~/mysqlsampledatabase.sql
+cd ../..
+cat data/mysqlsampledatabase.sql | ssh -i ~/.ssh/new-key.pem ec2-user@<BASTION_PUBLIC_IP> 'cat > ~/mysqlsampledatabase.sql'
 ```
 This uploads your SQL script to the bastion instance.
+
+
 #### Step 4:  Connect to MySQL and Execute SQL Script
 From the bastion host, run the following command to import the SQL data into your RDS instance:
 ```
@@ -95,3 +98,4 @@ mysql -h endpoint -u your_username -p < mysqlsampledatabase.sql
 - Replace <RDS_ENDPOINT> with the endpoint of your RDS instance 
 - Replace <USERNAME> with your MySQL username (e.g., admin)
 - Enter the MySQL password when prompted
+
