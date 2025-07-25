@@ -14,10 +14,10 @@ declare -A TF_VARS=(
   ["TF_VAR_availability_zone_2"]="us-east-1b"
 
   ["TF_VAR_ami_id"]="ami-0cbbe2c6a1bb2ad63"
-  ["TF_VAR_key_name"]="new-key"
-  ["TF_VAR_db_username"]="admin"
-  ["TF_VAR_db_password"]="password123"
-  ["TF_VAR_db_name"]="mydatabase"
+  ["TF_VAR_key_name"]="your-key"
+  ["TF_VAR_db_username"]="database_user"
+  ["TF_VAR_db_password"]="yourpassword"
+  ["TF_VAR_db_name"]="yourdatabase"
 )
 
 for var in "${!TF_VARS[@]}"; do
