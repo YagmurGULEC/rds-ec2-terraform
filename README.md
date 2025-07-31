@@ -1,6 +1,7 @@
 ## RDS MySQL with Bastion Host-Terraform Deployment
 ![Alt text](./diagram.svg)
-
+You may read the Towards Data Science article from the link. 
+https://towardsdatascience.com/end-to-end-aws-rds-setup-with-bastion-host-using-terraform
 ### Prerequisites 
 - Terraform installed
 - AWS CLI configured
